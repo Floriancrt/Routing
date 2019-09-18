@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-routing';
+
+  navbarOpen = false;
+
+  toggleNavbar()
+  {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
+
 }
