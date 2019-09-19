@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-articles',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  gotoDetails(articleId: any) {
+    this.router.navigate(['/article/', articleId]);
+  }
   article = {
     id: 100,
     title: 'How to make router & navigation in Angular 8',
